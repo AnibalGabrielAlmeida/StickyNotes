@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public interface INotesService {
+public interface INoteService {
     //Create
     public void createNote(Note note);
 
@@ -16,6 +16,7 @@ public interface INotesService {
 
     //Update
     public Note updateNote(Long id, Note updateNote);
+
     //Delete
     public void deleteNoteById(Long id);
 }

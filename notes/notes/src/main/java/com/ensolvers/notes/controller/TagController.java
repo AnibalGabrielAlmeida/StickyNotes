@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/tags")
+@RequestMapping("/tag")
 public class TagController {
 
     @Autowired
@@ -19,19 +19,19 @@ public class TagController {
     /* Utilizing ResponseEntity for custom error handling. ResponseEntity provides precise control
      * over HTTP response details, allowing consistent error messages and status codes in the API.
      * Planning to enhance error and exception handling in the future.*/
-    @PostMapping
+    @PostMapping("/create")
     public ResponseEntity<Void> createTag(@RequestBody Tag tag) {
         tagService.createTag(tag);
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
-    @GetMapping
+    @GetMapping("/list")
     public ResponseEntity<List<Tag>> getAllTags() {
         List<Tag> tags = tagService.getAllTags();
         return new ResponseEntity<>(tags, HttpStatus.OK);
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/find/{id}")
     public ResponseEntity<Tag> getTagById(@PathVariable Long id) {
         Tag tag = tagService.findById(id);
         return tag != null
@@ -39,7 +39,7 @@ public class TagController {
                 : new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 
-    @PutMapping("/{id}")
+    @PutMapping("/edit/{id}")
     public ResponseEntity<Tag> updateTag(@PathVariable Long id, @RequestBody Tag updateTag) {
         Tag updatedTag = tagService.updateTag(id, updateTag);
         return updatedTag != null
@@ -47,7 +47,7 @@ public class TagController {
                 : new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/delete/{id}")
     public ResponseEntity<Void> deleteTagById(@PathVariable Long id) {
         tagService.deleteTagById(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);

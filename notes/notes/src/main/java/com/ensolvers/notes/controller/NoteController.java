@@ -21,19 +21,19 @@ public class NoteController {
      * over HTTP response details, allowing consistent error messages and status codes in the API.
      * Planning to enhance error and exception handling in the future.*/
 
-    @PostMapping
+    @PostMapping("/create")
     public ResponseEntity<Void> createNote(@RequestBody Note note) {
         noteService.createNote(note);
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
-    @GetMapping
+    @GetMapping("/list")
     public ResponseEntity<List<Note>> getAllNotes() {
         List<Note> notes = noteService.getAllNotes();
         return new ResponseEntity<>(notes, HttpStatus.OK);
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/find/{id}")
     public ResponseEntity<Note> getNoteById(@PathVariable Long id) {
         Note note = noteService.findById(id);
         return note != null
@@ -41,7 +41,7 @@ public class NoteController {
                 : new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 
-    @PutMapping("/{id}")
+    @PutMapping("/edit/{id}")
     public ResponseEntity<Note> updateNote(@PathVariable Long id, @RequestBody Note updateNote) {
         Note updatedNote = noteService.updateNote(id, updateNote);
         return updatedNote != null
@@ -49,9 +49,11 @@ public class NoteController {
                 : new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/delete/{id}")
     public ResponseEntity<Void> deleteNoteById(@PathVariable Long id) {
         noteService.deleteNoteById(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
+
+
 }

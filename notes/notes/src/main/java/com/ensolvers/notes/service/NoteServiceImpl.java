@@ -42,4 +42,34 @@ public class NoteServiceImpl implements INoteService {
     public void deleteNoteById(Long id) {
         noteRepository.deleteById(id);
     }
+
+
+    @Override
+    public List<Note> getArchivedNotes() {
+        return noteRepository.findByArchivedTrue();
+    }
+
+
+    @Override
+    public void archiveNoteById(Long id) {
+        Note note = noteRepository.findById(id).orElseThrow(() ->
+                new RuntimeException("Note not found with id: " + id)
+        );
+
+        note.setArchived(true);
+        noteRepository.save(note);
+    }
+
+    @Override
+    public void unarchiveNoteById(Long id) {
+        Note note = noteRepository.findById(id).orElseThrow(() ->
+                new RuntimeException("Note not found with id: " + id)
+        );
+
+        note.setArchived(false);
+        noteRepository.save(note);
+    }
+
+
+
 }

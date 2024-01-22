@@ -33,6 +33,12 @@ public class NoteController {
         return new ResponseEntity<>(notes, HttpStatus.OK);
     }
 
+    @GetMapping("/list/archived")
+    public ResponseEntity<List<Note>> getAllArchivedNotes() {
+        List<Note> notes = noteService.getArchivedNotes();
+        return new ResponseEntity<>(notes, HttpStatus.OK);
+    }
+
     @GetMapping("/find/{id}")
     public ResponseEntity<Note> getNoteById(@PathVariable Long id) {
         Note note = noteService.findById(id);
@@ -55,5 +61,24 @@ public class NoteController {
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
+    @PutMapping("/archive/{id}")
+    public ResponseEntity<Void> archiveNoteById(@PathVariable Long id) {
+        try {
+            noteService.archiveNoteById(id);
+            return new ResponseEntity<>(HttpStatus.OK);
+        } catch (RuntimeException e) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+    }
+
+    @PutMapping("/unarchive/{id}")
+    public ResponseEntity<Void> unarchiveNoteById(@PathVariable Long id) {
+        try {
+            noteService.unarchiveNoteById(id);
+            return new ResponseEntity<>(HttpStatus.OK);
+        } catch (RuntimeException e) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+    }
 
 }

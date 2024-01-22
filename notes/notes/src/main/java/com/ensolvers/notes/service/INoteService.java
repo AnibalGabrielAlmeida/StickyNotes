@@ -19,4 +19,11 @@ public interface INoteService {
 
     //Delete
     public void deleteNoteById(Long id);
+
+    void archiveNoteById(Long id);
+
+    void unarchiveNoteById(Long id);
+
+    List<Note> getArchivedNotes();
+
 }

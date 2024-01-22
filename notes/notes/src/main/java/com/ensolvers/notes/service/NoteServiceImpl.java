@@ -1,44 +1,45 @@
 package com.ensolvers.notes.service;
 
 import com.ensolvers.notes.model.Note;
-import com.ensolvers.notes.repository.NotesRepository;
+import com.ensolvers.notes.repository.NoteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class NotesServiceImpl implements INotesService {
+public class NoteServiceImpl implements INoteService {
     @Autowired
-    NotesRepository notesRepository;
+    NoteRepository noteRepository;
     @Override
     public void createNote(Note note) {
-        notesRepository.save(note);
+        noteRepository.save(note);
     }
 
     @Override
     public List<Note> getAllNotes() {
-        return notesRepository.findAll();
+        return noteRepository.findAll();
     }
 
     @Override
     public Note findById(Long id) {
-        return notesRepository.findById(id).orElse(null);
+        return noteRepository.findById(id).orElse(null);
     }
 
     @Override
     public Note updateNote(Long id, Note updateNote) {
-        Note note = notesRepository.findById(id).orElse(null);
+        Note note = noteRepository.findById(id).orElse(null);
         if (note != null){
             note.setTitle(updateNote.getTitle());
             note.setContent(updateNote.getContent());
             note.setArchived(updateNote.getArchived());
+            return noteRepository.save(note);
         }
-        return notesRepository.save(note);
+        throw new RuntimeException("Note not found with id: " + id);
     }
 
     @Override
     public void deleteNoteById(Long id) {
-        notesRepository.deleteById(id);
+        noteRepository.deleteById(id);
     }
 }

@@ -81,4 +81,21 @@ public class NoteController {
         }
     }
 
+
+    @PutMapping("/addTags/{id}")
+    public ResponseEntity<Note> addTagsToNote(@PathVariable Long id, @RequestBody List<Long> tagIds) {
+        Note updatedNote = noteService.addTagsToNote(id, tagIds);
+        return updatedNote != null
+                ? new ResponseEntity<>(updatedNote, HttpStatus.OK)
+                : new ResponseEntity<>(HttpStatus.NOT_FOUND);
+    }
+
+    @PutMapping("/updateTags/{id}")
+    public ResponseEntity<Note> updateTagsOfNote(@PathVariable Long id, @RequestBody List<Long> tagIds) {
+        Note updatedNote = noteService.updateTagsOfNote(id, tagIds);
+        return updatedNote != null
+                ? new ResponseEntity<>(updatedNote, HttpStatus.OK)
+                : new ResponseEntity<>(HttpStatus.NOT_FOUND);
+    }
+
 }

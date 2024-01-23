@@ -26,4 +26,10 @@ public interface INoteService {
 
     List<Note> getArchivedNotes();
 
+
+    /*---------check----------*/
+    public Note addTagsToNote(Long noteId, List<Long> tagIds);
+
+
+    public Note updateTagsOfNote(Long noteId, List<Long> tagIds);
 }

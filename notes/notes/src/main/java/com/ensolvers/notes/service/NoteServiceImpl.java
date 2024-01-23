@@ -1,16 +1,22 @@
 package com.ensolvers.notes.service;
 
 import com.ensolvers.notes.model.Note;
+import com.ensolvers.notes.model.Tag;
 import com.ensolvers.notes.repository.NoteRepository;
+import com.ensolvers.notes.repository.TagRepository;
+import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.HashSet;
 import java.util.List;
 
 @Service
 public class NoteServiceImpl implements INoteService {
     @Autowired
     NoteRepository noteRepository;
+    @Autowired
+    TagRepository tagRepository;
     @Override
     public void createNote(Note note) {
         noteRepository.save(note);
@@ -71,5 +77,32 @@ public class NoteServiceImpl implements INoteService {
     }
 
 
+/*-------------check------------------*/
+
+    @Override
+    public Note addTagsToNote(Long noteId, List<Long> tagIds) {
+        Note note = noteRepository.findById(noteId).orElse(null);
+        if (note != null) {
+            List<Tag> tags = tagRepository.findAllById(tagIds);
+            if (!tags.isEmpty()) {
+                note.getTags().addAll(tags);
+                return noteRepository.save(note);
+            } else {
+                throw new RuntimeException("No valid tags found with provided IDs.");
+            }
+        }
+        throw new EntityNotFoundException("Note not found with id: " + noteId);
+    }
+
+    @Override
+    public Note updateTagsOfNote(Long noteId, List<Long> tagIds) {
+        Note note = noteRepository.findById(noteId).orElse(null);
+        if (note != null) {
+            List<Tag> tags = tagRepository.findAllById(tagIds);
+            note.setTags(new HashSet<>(tags));
+            return noteRepository.save(note);
+        }
+        throw new RuntimeException("Note not found with id: " + noteId);
+    }
 
 }

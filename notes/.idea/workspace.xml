@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2a9cb1ca-dc98-4e1c-811f-b0f4abc1055c" name="Changes" comment="Added manyToMany relations">
+    <list default="true" id="2a9cb1ca-dc98-4e1c-811f-b0f4abc1055c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/notes/src/main/java/com/ensolvers/notes/controller/NoteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/notes/src/main/java/com/ensolvers/notes/controller/NoteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notes/src/main/java/com/ensolvers/notes/repository/NoteRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/notes/src/main/java/com/ensolvers/notes/repository/NoteRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notes/src/main/java/com/ensolvers/notes/model/Note.java" beforeDir="false" afterPath="$PROJECT_DIR$/notes/src/main/java/com/ensolvers/notes/model/Note.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notes/src/main/java/com/ensolvers/notes/model/Tag.java" beforeDir="false" afterPath="$PROJECT_DIR$/notes/src/main/java/com/ensolvers/notes/model/Tag.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/notes/src/main/java/com/ensolvers/notes/service/INoteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/notes/src/main/java/com/ensolvers/notes/service/INoteService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/notes/src/main/java/com/ensolvers/notes/service/NoteServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/notes/src/main/java/com/ensolvers/notes/service/NoteServiceImpl.java" afterDir="false" />
     </list>
@@ -53,12 +54,21 @@
       <option name="project" value="LOCAL" />
       <updated>1705954516603</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added method to list archived notes, to archive and unarchive notes">
+      <option name="closed" value="true" />
+      <created>1705960100063</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1705960100063</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added implementations for Tag entity, Tag repository, Tag services, and controllers for Note and Tag entities." />
     <MESSAGE value="Added manyToMany relations" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added manyToMany relations" />
+    <MESSAGE value="Added method to list archived notes, to archive and unarchive notes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added method to list archived notes, to archive and unarchive notes" />
   </component>
 </project>

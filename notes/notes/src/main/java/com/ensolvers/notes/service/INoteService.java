@@ -32,4 +32,6 @@ public interface INoteService {
 
 
     public Note updateTagsOfNote(Long noteId, List<Long> tagIds);
+
+    Note removeTagsFromNote(Long noteId, List<Long> tagIds);
 }

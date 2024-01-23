@@ -97,5 +97,14 @@ public class NoteController {
                 ? new ResponseEntity<>(updatedNote, HttpStatus.OK)
                 : new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
+    /*test*/
+    @DeleteMapping("/removeTags/{id}")
+    public ResponseEntity<Note> removeTagsFromNote(@PathVariable Long id, @RequestBody List<Long> tagIds) {
+        Note updatedNote = noteService.removeTagsFromNote(id, tagIds);
+        return updatedNote != null
+                ? new ResponseEntity<>(updatedNote, HttpStatus.OK)
+                : new ResponseEntity<>(HttpStatus.NOT_FOUND);
+    }
+
 
 }

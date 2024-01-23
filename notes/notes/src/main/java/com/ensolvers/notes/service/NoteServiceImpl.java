@@ -105,4 +105,18 @@ public class NoteServiceImpl implements INoteService {
         throw new RuntimeException("Note not found with id: " + noteId);
     }
 
+    @Override
+    public Note removeTagsFromNote(Long noteId, List<Long> tagIds) {
+        Note note = noteRepository.findById(noteId).orElse(null);
+        if (note != null) {
+            List<Tag> tagsToRemove = tagRepository.findAllById(tagIds);
+            if (!tagsToRemove.isEmpty()) {
+                note.getTags().removeAll(tagsToRemove);
+                return noteRepository.save(note);
+            } else {
+                throw new RuntimeException("No valid tags found with provided IDs.");
+            }
+        }
+        throw new EntityNotFoundException("Note not found with id: " + noteId);
+    }
 }

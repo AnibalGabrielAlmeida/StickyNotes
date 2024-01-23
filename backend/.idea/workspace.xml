@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2a9cb1ca-dc98-4e1c-811f-b0f4abc1055c" name="Changes" comment="added delete tag method">
+      <change beforePath="$PROJECT_DIR$/../notes/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../notes/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../notes/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../notes/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../notes/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../notes/.idea/notes.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/notes.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../notes/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../notes/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../notes/notes/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/notes/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../notes/notes/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/notes/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../notes/notes/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/notes/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../notes/notes/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/notes/mvnw" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../notes/notes/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/notes/mvnw.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../notes/notes/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/notes/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../notes/notes/src/main/java/com/ensolvers/notes/NotesApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/notes/src/main/java/com/ensolvers/notes/NotesApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../notes/notes/src/main/java/com/ensolvers/notes/controller/NoteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/notes/src/main/java/com/ensolvers/notes/controller/NoteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../notes/notes/src/main/java/com/ensolvers/notes/controller/TagController.java" beforeDir="false" afterPath="$PROJECT_DIR$/notes/src/main/java/com/ensolvers/notes/controller/TagController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../notes/notes/src/main/java/com/ensolvers/notes/model/Note.java" beforeDir="false" afterPath="$PROJECT_DIR$/notes/src/main/java/com/ensolvers/notes/model/Note.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../notes/notes/src/main/java/com/ensolvers/notes/model/Tag.java" beforeDir="false" afterPath="$PROJECT_DIR$/notes/src/main/java/com/ensolvers/notes/model/Tag.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../notes/notes/src/main/java/com/ensolvers/notes/repository/NoteRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/notes/src/main/java/com/ensolvers/notes/repository/NoteRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../notes/notes/src/main/java/com/ensolvers/notes/repository/TagRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/notes/src/main/java/com/ensolvers/notes/repository/TagRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../notes/notes/src/main/java/com/ensolvers/notes/service/INoteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/notes/src/main/java/com/ensolvers/notes/service/INoteService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../notes/notes/src/main/java/com/ensolvers/notes/service/ITagService.java" beforeDir="false" afterPath="$PROJECT_DIR$/notes/src/main/java/com/ensolvers/notes/service/ITagService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../notes/notes/src/main/java/com/ensolvers/notes/service/NoteServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/notes/src/main/java/com/ensolvers/notes/service/NoteServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../notes/notes/src/main/java/com/ensolvers/notes/service/TagServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/notes/src/main/java/com/ensolvers/notes/service/TagServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../notes/notes/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/notes/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../notes/notes/src/test/java/com/ensolvers/notes/NotesApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/notes/src/test/java/com/ensolvers/notes/NotesApplicationTests.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2bKBE5WJcmKFhTpuvNdwzE3zF1g" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2a9cb1ca-dc98-4e1c-811f-b0f4abc1055c" name="Changes" comment="" />
+      <created>1705953776965</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1705953776965</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Added implementations for Tag entity, Tag repository, Tag services, and controllers for Note and Tag entities.">
+      <option name="closed" value="true" />
+      <created>1705954516603</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1705954516603</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Added method to list archived notes, to archive and unarchive notes">
+      <option name="closed" value="true" />
+      <created>1705960100063</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1705960100063</updated>
+    </task>
+    <task id="LOCAL-00003" summary="confirmed function of addTag method">
+      <option name="closed" value="true" />
+      <created>1705992945886</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1705992945886</updated>
+    </task>
+    <task id="LOCAL-00004" summary="added delete tag method">
+      <option name="closed" value="true" />
+      <created>1706024342377</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1706024342377</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added implementations for Tag entity, Tag repository, Tag services, and controllers for Note and Tag entities." />
+    <MESSAGE value="Added manyToMany relations" />
+    <MESSAGE value="Added method to list archived notes, to archive and unarchive notes" />
+    <MESSAGE value="confirmed function of addTag method" />
+    <MESSAGE value="added delete tag method" />
+    <option name="LAST_COMMIT_MESSAGE" value="added delete tag method" />
+  </component>
+</project>

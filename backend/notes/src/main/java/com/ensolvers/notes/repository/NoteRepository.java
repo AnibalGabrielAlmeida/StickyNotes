@@ -12,4 +12,6 @@ public interface NoteRepository extends JpaRepository <Note, Long> {
 
 
     List<Note> findByArchivedTrue();
+
+    List<Note> findByTagsIdIn(List<Long> tagIds);
 }

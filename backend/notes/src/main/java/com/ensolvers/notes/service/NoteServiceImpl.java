@@ -119,4 +119,9 @@ public class NoteServiceImpl implements INoteService {
         }
         throw new EntityNotFoundException("Note not found with id: " + noteId);
     }
+    @Override
+    public List<Note> getNotesByTags(List<Long> tagIds) {
+        return noteRepository.findByTagsIdIn(tagIds);
+    }
+
 }

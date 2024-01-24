@@ -12,6 +12,8 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/note")
+//SE AGREGO ESTO PARA PROBAR CON EL FRONT
+@CrossOrigin(origins = "http://localhost:5173")
 public class NoteController {
 
     @Autowired

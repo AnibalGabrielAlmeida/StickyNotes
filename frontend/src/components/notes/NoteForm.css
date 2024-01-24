@@ -1,0 +1,33 @@
+/* NoteForm.css */
+.note-form {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 8px;
+  }
+  
+  input,
+  textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Agrega estilos para el mensaje de prueba */
+  .test-message {
+    margin-top: 16px;
+    font-weight: bold;
+    color: #28a745;
+  }
+  

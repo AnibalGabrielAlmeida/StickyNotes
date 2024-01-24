@@ -1,33 +1,42 @@
-/* NoteForm.css */
-.note-form {
-    max-width: 400px;
-    margin: 0 auto;
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 8px;
-  }
-  
-  input,
-  textarea {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 16px;
-  }
-  
-  button {
-    background-color: #007bff;
-    color: #fff;
-    padding: 8px 16px;
-    border: none;
-    cursor: pointer;
-  }
-  
-  /* Agrega estilos para el mensaje de prueba */
-  .test-message {
-    margin-top: 16px;
-    font-weight: bold;
-    color: #28a745;
-  }
-  
+.centered-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.grid-form {
+  display: grid;
+  gap: 16px; 
+}
+
+.form-group {
+  color: #282828;
+}
+
+
+#title {
+  grid-row: 1; 
+  background-color: #fefafa; 
+}
+
+
+#content {
+  grid-row: 2; 
+  background-color: #fefafa; 
+  resize: none; 
+}
+
+
+button {
+  grid-row: 3; 
+  background-color: #4e4e4e; 
+  color: #fff; 
+  border: none;
+  cursor: pointer;
+  padding: 8px 16px;
+}
+
+button:hover {
+  background-color: #282828; 
+}

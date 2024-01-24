@@ -1,0 +1,33 @@
+.tag-form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  color: black;
+}
+
+.tag-input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.tag-input {
+  width: 200px; 
+  padding: 8px;
+  background-color: #fefafa;
+}
+
+.tag-button {
+  padding: 8px 16px;
+  background-color: #4e4e4e;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.tag-button:hover {
+  background-color: #282828;
+}
+

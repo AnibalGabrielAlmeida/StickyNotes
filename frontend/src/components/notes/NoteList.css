@@ -1,26 +1,28 @@
-/* NoteList.css */
 .note-list-container {
     max-width: 800px;
     margin: 0 auto;
     padding: 16px;
+    color: #282828;
   }
   
   .note-list-title {
     font-size: 24px;
     margin-bottom: 16px;
-    color: #52ace7;
+    color: #282828;
   }
   
   .note-list-ul {
     list-style-type: none;
     padding: 0;
+    color:#282828;
   }
   
   .note-item {
-    border: 1px solid #ddd;
+    border: 1px solid #282828;
     border-radius: 8px;
     padding: 16px;
     margin-bottom: 16px;
+    background-color: #fefafa;
   }
   
   .note-item strong {
@@ -31,7 +33,7 @@
   
   .note-item p {
     font-size: 14px;
-    color: #52ace7;
+    color: #282828;
   }
   
   .note-buttons {
@@ -41,13 +43,13 @@
   .note-buttons button {
     margin-right: 8px;
     padding: 8px 16px;
-    background-color: #007bff;
+    background-color: #4e4e4e;
     color: #fff;
     border: none;
     cursor: pointer;
   }
   
   .note-buttons button:hover {
-    background-color: #0056b3;
+    background-color: #282828;
   }
   

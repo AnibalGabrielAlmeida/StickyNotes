@@ -1,4 +1,3 @@
-// components/notes/NoteForm.jsx
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useNoteContext } from "../../context/NoteContext"; // Import useNoteContext
@@ -25,7 +24,8 @@ const NoteForm = () => {
             await fetchNotes(); // Wait for notes to update
             setTitle(""); // Clear the title after creating the note
             setContent(""); // Clear the content after creating the note
-            window.location.reload(); // Reload the page to reflect the new note
+            await fetchNotes();//  reflect the new note
+             
           } else {
             console.error("Failed to create note");
           }
@@ -34,28 +34,43 @@ const NoteForm = () => {
         }
       };
   
-    return (
-    <form onSubmit={handleSubmit}>
-      <label>
-        Title:
-        <input
-          type="text"
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
-        />
-      </label>
-      <br />
-      <label>
-        Content:
-        <textarea
-          value={content}
-          onChange={(e) => setContent(e.target.value)}
-        />
-      </label>
-      <br />
-      <button type="submit">Create Note</button>
-    </form>
-  );
-};
-
+      return (
+        <div className="centered-form">
+          <h2 className="note-form-title">NOTE CREATION</h2>
+          <form onSubmit={handleSubmit} className="centered-form">
+            <div className="form-group">
+              <label htmlFor="title" className="form-label">
+                Title:
+              </label>
+              <input
+                type="text"
+                id="title"
+                value={title}
+                placeholder="Enter new title"
+                className="note-input"
+                onChange={(e) => setTitle(e.target.value)}
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="content" className="form-label">
+                Content:
+              </label>
+              <textarea
+                type="text"
+                id="content"
+                value={content}
+                placeholder="Enter content"
+                className="note-input"
+                onChange={(e) => setContent(e.target.value)}
+              />
+            </div>
+            <br />
+            <button type="submit" className="submit-button">
+              Create Note
+            </button>
+          </form>
+        </div>
+      );
+      
+    };
 export default NoteForm;

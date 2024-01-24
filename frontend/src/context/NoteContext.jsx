@@ -1,4 +1,3 @@
-// context/NoteContext.js
 import { createContext, useContext, useState } from 'react';
 
 const NoteContext = createContext();

@@ -1,0 +1,39 @@
+/* Navbar.css */
+
+/* Estilos generales */
+.navbar-container {
+  background-color: #fefafa; /* Fondo del Navbar */
+  border: 1px solid #282828; /* Borde inferior */
+  padding: 0.5rem 2rem; /* Espaciado interno */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+
+.navbar-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: #282828;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.3s ease;
+}
+
+.app-title {
+  color: #282828;
+  margin-left: auto;
+}
+
+.navbar-links a:hover {
+  background-color: #e9e9e9; 
+}

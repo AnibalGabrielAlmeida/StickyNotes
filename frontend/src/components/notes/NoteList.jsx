@@ -3,13 +3,13 @@ import { useNoteContext } from "../../context/NoteContext"; // Import the contex
 import "./NoteList.css";
 
 
-const NoteList = () => {
+const NoteList = ({}) => {
   // Use functions from the context
   const { notes, fetchNotes, deleteNote, editNote, archiveNote, unarchiveNote } = useNoteContext();
-  // New state to manage the note being edited
+ // New state to manage the note being edited
   const [editingNote, setEditingNote] = useState(null);
   // New state to manage the view mode (default is 'unarchived')
-  const [viewMode, setViewMode] = useState("unarchived");
+  const [viewMode, setViewMode] = useState("unarchived"); 
 
   useEffect(() => {
     fetchNotes();
@@ -73,18 +73,23 @@ const NoteList = () => {
     setViewMode(mode);
   };
 
+
   return (
     <div className="note-list-container">
       <h2 className="note-list-title">
-        {viewMode === "archived" ? "Archived Notes" : "Notes"}
+        {viewMode === "archived" ? "ARCHIVED NOTES" : "NOTES"}
       </h2>
       <div className="note-list-buttons">
-         {viewMode === "unarchived" && (
-         <button onClick={() => handleToggleViewMode("archived")}>Show Archived</button>
-         )}
-         {viewMode === "archived" && (
-          <button onClick={() => handleToggleViewMode("unarchived")}>Show Unarchived</button>
-         )}
+        {viewMode === "unarchived" && (
+          <button onClick={() => handleToggleViewMode("archived")} className="toggle-button">
+            Show Archived
+          </button>
+        )}
+        {viewMode === "archived" && (
+          <button onClick={() => handleToggleViewMode("unarchived")} className="toggle-button">
+            Show Unarchived
+          </button>
+        )}
       </div>
       <ul className="note-list-ul">
         {notes
@@ -98,15 +103,22 @@ const NoteList = () => {
                     name="title"
                     value={editingNote.title}
                     onChange={handleInputChange}
+                    className="note-input"
                   />
                   <textarea
                     name="content"
                     value={editingNote.content}
                     onChange={handleInputChange}
+                    className="note-input"
+                    readOnly
                   />
                   <div className="note-buttons">
-                    <button onClick={handleSaveEdit}>Save</button>
-                    <button onClick={handleCancelEdit}>Cancel</button>
+                    <button onClick={handleSaveEdit} className="edit-button">
+                      Save
+                    </button>
+                    <button onClick={handleCancelEdit} className="edit-button">
+                      Cancel
+                    </button>
                   </div>
                 </>
               ) : (
@@ -114,12 +126,20 @@ const NoteList = () => {
                   <strong>{note.title}</strong>
                   <p>{note.content}</p>
                   <div className="note-buttons">
-                    <button onClick={() => handleEditNote(note.id)}>Edit</button>
-                    <button onClick={() => handleDeleteNote(note.id)}>Delete</button>
+                    <button onClick={() => handleEditNote(note.id)} className="edit-button">
+                      Edit
+                    </button>
+                    <button onClick={() => handleDeleteNote(note.id)} className="edit-button">
+                      Delete
+                    </button>
                     {note.archived ? (
-                      <button onClick={() => handleUnarchiveNote(note.id)}>Unarchive</button>
+                      <button onClick={() => handleUnarchiveNote(note.id)} className="edit-button">
+                        Unarchive
+                      </button>
                     ) : (
-                      <button onClick={() => handleArchiveNote(note.id)}>Archive</button>
+                      <button onClick={() => handleArchiveNote(note.id)} className="edit-button">
+                        Archive
+                      </button>
                     )}
                   </div>
                 </>
@@ -129,5 +149,6 @@ const NoteList = () => {
       </ul>
     </div>
   );
+  
   }
 export default NoteList;

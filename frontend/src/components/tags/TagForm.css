@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   margin-top: 20px;
-  color: black;
+  color: #1d1d1d;
 }
 
 .tag-input-container {
@@ -11,12 +11,20 @@
   flex-direction: column;
   gap: 10px;
   align-items: center;
+  user-select: none;
+}
+
+.tag-form-title {
+  user-select: none;
 }
 
 .tag-input {
-  width: 200px; 
+  width: 200px;
   padding: 8px;
-  background-color: #fefafa;
+  background-color: #d1cac2;
+  border: 1px solid #1d1d1d; 
+  border-radius: 10px; 
+  user-select: none;
 }
 
 .tag-button {
@@ -28,6 +36,5 @@
 }
 
 .tag-button:hover {
-  background-color: #282828;
+  background-color: #1d1d1d;
 }
-

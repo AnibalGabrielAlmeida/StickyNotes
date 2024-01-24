@@ -3,9 +3,9 @@ import * as ReactDOM from 'react-dom/client';
 import { createBrowserRouter, Route, Routes, RouterProvider } from 'react-router-dom';
 import { NoteProvider } from './context/NoteContext';
 import { TagProvider } from './context/TagContext';
-import './index.css';
+import './routes/root.css';
 import NavBar from './components/notes/NavBar';
-import { NoteRoot, TagRoot } from './routes/root';
+import {  TagRoot } from './routes/root';
 import NoteForm from './components/notes/NoteForm';
 import TagForm from './components/tags/TagForm';
 import TagList from './components/tags/TagList';
@@ -13,7 +13,8 @@ import NoteList from './components/notes/NoteList';
 
 const App = () => {
   return (
-    <NoteProvider>
+    
+    <NoteProvider >
       <TagProvider>
         <NavBar />
         <Routes>
@@ -24,6 +25,7 @@ const App = () => {
         </Routes>
       </TagProvider>
     </NoteProvider>
+    
   );
 };
 

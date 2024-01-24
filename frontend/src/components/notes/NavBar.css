@@ -2,8 +2,8 @@
 
 /* Estilos generales */
 .navbar-container {
-  background-color: #fefafa; /* Fondo del Navbar */
-  border: 1px solid #282828; /* Borde inferior */
+  background-color: #d1cac2; /* Fondo del Navbar */
+  border: 1px solid #1d1d1d; /* Borde inferior */
   padding: 0.5rem 2rem; /* Espaciado interno */
   display: flex;
   justify-content: space-between;
@@ -18,22 +18,26 @@
 .navbar-links {
   display: flex;
   gap: 1.5rem;
+  user-select: none;
 }
 
 .navbar-links a {
   text-decoration: none;
-  color: #282828;
+  color: #1d1d1d;
   font-weight: 500;
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
   transition: background-color 0.3s ease;
+  user-select: none;
 }
 
 .app-title {
-  color: #282828;
+  color: #1d1d1d;
   margin-left: auto;
+  user-select: none;
 }
 
 .navbar-links a:hover {
-  background-color: #e9e9e9; 
+  background-color: #b49884; 
+  border-radius: 10px;
 }

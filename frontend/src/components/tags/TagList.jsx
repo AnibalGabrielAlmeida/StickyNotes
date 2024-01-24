@@ -7,7 +7,7 @@ const TagList = () => {
 
   return (
     <div className="tag-list-container">
-      <h2 className="tag-list-title">Tag List</h2>
+      <h2 className="tag-list-title">TAG LIST</h2>
       <ul className="tag-list">
         {tags.map((tag) => (
           <li key={tag.id} className="tag-list-item">

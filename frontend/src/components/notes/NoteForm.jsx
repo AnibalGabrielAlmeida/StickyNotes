@@ -71,6 +71,5 @@ const NoteForm = () => {
           </form>
         </div>
       );
-      
     };
 export default NoteForm;

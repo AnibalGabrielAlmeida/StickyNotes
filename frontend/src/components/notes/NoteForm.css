@@ -1,42 +1,64 @@
 .centered-form {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  height: 100vh;
+  margin-top: 20px;
+  color: #1d1d1d;
 }
 
-.grid-form {
-  display: grid;
-  gap: 16px; 
+.note-form-title {
+  font-size: 24px;
+  margin-bottom: 8px;
+  user-select: none;
 }
 
 .form-group {
-  color: #282828;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
 
-
-#title {
-  grid-row: 1; 
-  background-color: #fefafa; 
+.form-label {
+  user-select: none;
+  margin-top: 14px;
+  font-size: 16px;
+  font-weight: bold;
 }
 
-
-#content {
-  grid-row: 2; 
-  background-color: #fefafa; 
-  resize: none; 
+.form-group label:last-child {
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
 
+.note-input {
+  width: 300px;
+  padding: 8px;
+  background-color: #d1cac2;
+  border: 1px solid #1d1d1d; /* Añadido borde */
+  border-radius: 10px; /* Añadido radio de borde */
+}
 
-button {
-  grid-row: 3; 
-  background-color: #4e4e4e; 
-  color: #fff; 
+.submit-button {
+  padding: 8px 16px;
+  background-color: #4e4e4e;
+  color: #fff;
   border: none;
   cursor: pointer;
-  padding: 8px 16px;
+  border: 1px solid #1d1d1d; /* Añadido borde */
+  border-radius: 10px; /* Añadido radio de borde */
 }
 
-button:hover {
-  background-color: #282828; 
+.submit-button:hover {
+  background-color: #1d1d1d;
+}
+
+#content {
+  grid-row: 2;
+  background-color: #d1cac2;
+  user-select: none;
+  resize: none;
+  height: 200px;
+  border: 1px solid #1d1d1d; /* Añadido borde */
+  border-radius: 10px; /* Añadido radio de borde */
 }

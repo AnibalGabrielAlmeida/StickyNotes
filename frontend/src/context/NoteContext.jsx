@@ -128,9 +128,49 @@ export const NoteProvider = ({ children }) => {
     }
   };
 
+  const updateNoteTags = async (id, tagId) => {
+    try {
+      const response = await fetch(`http://localhost:8080/note/updateTags/${id}`, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify([tagId]), // Envía un array de tagIds directamente
+      });
+  
+      if (!response.ok) {
+        throw new Error(`Failed to update tags for note with id ${id}`);
+      }
+  
+      // Devuelve la nota actualizada desde el servidor
+      return await response.json();
+    } catch (error) {
+      console.error("Error updating note tags:", error);
+      throw error;
+    }
+  };
+
+  const filterNotesByTags = async (tagIds) => {
+    try {
+      const response = await fetch(`http://localhost:8080/note/filterByTags?tagIds=${tagIds.join(",")}`);
+      
+      if (!response.ok) {
+        throw new Error(`Failed to filter notes by tags: ${tagIds}`);
+      }
+  
+      // Devuelve las notas filtradas desde el servidor
+      const filteredNotes = await response.json();
+      setNotes(filteredNotes);
+    } catch (error) {
+      console.error("Error filtering notes by tags:", error);
+      // Devuelve un array vacío en caso de error
+      return [];
+    }
+  };
+  
   return (
     <NoteContext.Provider value={{ notes, fetchNotes, createNote, 
-    deleteNote, editNote, archiveNote, unarchiveNote }}>
+    deleteNote, editNote, archiveNote, unarchiveNote, updateNoteTags, filterNotesByTags }}>
       {children}
     </NoteContext.Provider>
   );

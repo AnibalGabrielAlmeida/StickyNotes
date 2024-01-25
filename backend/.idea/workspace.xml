@@ -5,14 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2a9cb1ca-dc98-4e1c-811f-b0f4abc1055c" name="Changes" comment="added filter by tag method">
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-
-      <change beforePath="$PROJECT_DIR$/notes/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/notes/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notes/src/main/java/com/ensolvers/notes/controller/NoteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/notes/src/main/java/com/ensolvers/notes/controller/NoteController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/notes/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/notes/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/package.json" afterDir="false" />
-
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -108,10 +108,10 @@ public class NoteController {
                 : new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 
-    @GetMapping("/filterByTags")
-    public ResponseEntity<List<Note>> filterNotesByTags(@RequestParam List<Long> tagIds) {
-        List<Note> filteredNotes = noteService.getNotesByTags(tagIds);
-        return new ResponseEntity<>(filteredNotes, HttpStatus.OK);
-    }
+        @GetMapping("/filterByTags")
+        public ResponseEntity<List<Note>> filterNotesByTags(@RequestParam List<Long> tagIds) {
+            List<Note> filteredNotes = noteService.getNotesByTags(tagIds);
+            return new ResponseEntity<>(filteredNotes, HttpStatus.OK);
+        }
 
 }

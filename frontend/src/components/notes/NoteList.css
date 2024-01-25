@@ -1,63 +1,109 @@
 .note-list-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 16px;
-    color: #1d1d1d;
-  }
-  
-  .note-list-title {
-    font-size: 30px;
-    margin-bottom: 14px;
-    color: #1d1d1d;
-    text-align: center;
-    user-select: none;
-  }
-  
-  .note-list-ul {
-    list-style-type: none;
-    padding: 0;
-    color:#1d1d1d;
-    user-select: none;
-  }
-  
-  .note-item {
-    border: 1px solid   #1d1d1d;
-    border-radius: 10px;
-    padding: 16px;
-    margin-bottom: 16px;
-    background-color: #d1cac2;
-    user-select: none;
-  }
-  
-  .note-item strong {
-    font-size: 18px;
-    margin-bottom: 8px;
-    display: block;
-    user-select: none;
-  }
-  
-  .note-item p {
-    font-size: 14px;
-    color: #1d1d1d;
-    user-select: none;
-  }
-  
-  .note-buttons {
-    margin-top: 8px;
-    user-select: none;
-  }
-  
-  .note-buttons button {
-    margin-right: 8px;
-    padding: 8px 16px;
-    background-color: #4e4e4e;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    user-select: none;
-  }
-  
-  .note-buttons button:hover {
-    background-color: #1d1d1d;
-  }
-  
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 16px;
+  color: #1d1d1d;
+}
+
+.note-list-title {
+  font-size: 30px;
+  margin-bottom: 14px;
+  color: #1d1d1d;
+  text-align: center;
+  user-select: none;
+}
+
+.note-list-ul {
+  list-style-type: none;
+  padding: 0;
+  color: #1d1d1d;
+  user-select: none;
+}
+
+.note-item {
+  border: 1px solid #1d1d1d;
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 16px;
+  background-color: #d1cac2;
+  user-select: none;
+}
+
+.note-item strong {
+  font-size: 18px;
+  margin-bottom: 8px;
+  display: block;
+  user-select: none;
+}
+
+.note-item p {
+  font-size: 14px;
+  color: #1d1d1d;
+  user-select: none;
+}
+
+.note-buttons {
+  margin-top: 8px;
+  user-select: none;
+}
+
+.note-buttons button {
+  margin-right: 8px;
+  padding: 8px 16px;
+  background-color: #4e4e4e;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 5px; /* Ajusta según tu preferencia */
+}
+
+.note-buttons button:hover {
+  background-color: #1d1d1d;
+}
+
+.toggle-button {
+  padding: 8px 16px;
+  background-color: #4e4e4e;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 5px; /* Ajusta según tu preferencia */
+}
+
+.toggle-button:hover {
+  background-color: #1d1d1d;
+}
+
+/* Nuevos estilos para el desplegable y el botón Filter */
+.tag-filter-container {
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+}
+
+#tagFilter {
+  margin-right: 8px;
+  padding: 8px;
+  border: 1px solid #4e4e4e;
+  border-radius: 5px;
+}
+
+#tagFilter:hover {
+  border-color: #1d1d1d;
+}
+
+#filterButton {
+  padding: 8px 16px;
+  background-color: #4e4e4e;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 5px;
+}
+
+#filterButton:hover {
+  background-color: #1d1d1d;
+}

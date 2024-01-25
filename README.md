@@ -22,8 +22,8 @@ The backend is configured to use MariaDB as the database. Below is the configura
 # DataSource settings for MariaDB with UTF-8
 spring.datasource.url=jdbc:mariadb://localhost:3306/your_database_name?useUnicode=true&characterEncoding=utf-8
 spring.datasource.driverClassName=org.mariadb.jdbc.Driver
-spring.datasource.username=root
-spring.datasource.password=J!mh4ll3127
+spring.datasource.username=yourusername
+spring.datasource.password=yourpassword
 
 # H2 Console settings (if you want to keep it for development purposes)
 spring.h2.console.enabled=true
